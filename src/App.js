@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { createTheme, ThemeProvider } from "@mui/material";
+import HorizontalStepper from "./components/HorizontalStepper/HorizontalStepper";
+import TabsBar from "./components/TabsBar/TabsBar";
+
+// const deepPurple = '#482880'
+const theme = createTheme({
+  palette: {
+    primary: { main: "#482880" },
+    secondary: {
+      main: "#880e4f",
+    }
+  },
+});
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{backgroundColor: '#4527a0'}}>
+    <ThemeProvider theme={theme}>
+        <HorizontalStepper />
+        <TabsBar/> 
+    </ThemeProvider>
     </div>
   );
 }
