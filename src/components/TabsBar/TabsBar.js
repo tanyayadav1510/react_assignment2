@@ -30,6 +30,7 @@ export default function TabsContainer() {
   };
 
   return (
+    <div style={{ height: "100vh" }}>
       <Box sx={boxStyle}>
         <TabContext value={mainTab}>
           <MainTabs tab={mainTab} handleTabChange={handleMainTabChange} />
@@ -53,5 +54,6 @@ export default function TabsContainer() {
           )}
         </TabContext>
       </Box>
+    </div>
   );
 }
