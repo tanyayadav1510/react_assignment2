@@ -24,7 +24,12 @@ const menuItems = [
 ];
 
 export default function RequestTabPanel({ tabState = {}, setTabState }) {
-  const { method = menuItems[0].value, api = "", response = "", body = "" } = tabState;
+  const {
+    method = menuItems[0].value,
+    api = "",
+    response = "",
+    body = "",
+  } = tabState;
 
   const handleBodyChange = (event) => {
     setTabState({
@@ -53,9 +58,9 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
         method: method,
       };
 
-      if (method === 'POST') {
+      if (method === "POST") {
         requestOptions.headers = {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         };
         requestOptions.body = JSON.stringify({ body: body });
       }
@@ -81,10 +86,7 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
           <React.Fragment>
             <div style={{ display: "flex" }}>
               <div style={{ background: "white" }}>
-                <MenuItem
-                  {...bindTrigger(popupState)}
-                  style={menuItemStyle}
-                >
+                <MenuItem {...bindTrigger(popupState)} style={menuItemStyle}>
                   {method} <ExpandMoreIcon />
                 </MenuItem>
                 <Menu {...bindMenu(popupState)}>
@@ -113,10 +115,7 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
               />
 
               <div>
-                <MenuItem
-                  style={sendButtonStyle}
-                  onClick={handleSendRequest}
-                >
+                <MenuItem style={sendButtonStyle} onClick={handleSendRequest}>
                   Send
                 </MenuItem>
               </div>
@@ -173,7 +172,17 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
         <Divider variant="fullWidth" style={dividerStyle} />
       </div>
       <div style={submitButtonStyle}>
-        <Button variant="contained" sx={submitButtonStyle} onClick={handleSendRequest}>
+        <Button
+          variant="contained"
+          sx={{
+            ...submitButtonStyle,
+            borderRadius: "80px",
+            fontWeight: "bold",
+            color: "#4527a0",
+            backgroundColor: "white",
+          }}
+          onClick={handleSendRequest}
+        >
           Submit
         </Button>
       </div>

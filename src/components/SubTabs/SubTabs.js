@@ -170,13 +170,15 @@ const SubTabs = ({
           {Object.keys(tabStates).filter((tabValue) => subTabs[tabValue] !== null)
             .length !== 0 &&
             subTab !== "" && (
-              <TabPanel value={subTab} sx={{ flex: 1, overflowY: "auto", padding:"none" }}>
-                <RequestTabPanel
+              <div style={{paddingTop:"10px"}}>
+              <TabPanel value={subTab} sx={{ padding:"0px", flex: 1, overflowY: "auto"}}>
+                <RequestTabPanel 
                   key={subTab}
                   tabState={tabStates[subTab] || {}}
                   setTabState={handleTabStateChange}
                 />
               </TabPanel>
+              </div>
             )}
         </Box>
       </TabContext>

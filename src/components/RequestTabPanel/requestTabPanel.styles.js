@@ -29,13 +29,12 @@ export const containerStyle = {
   };
   
   export const dividerStyle = {
-    backgroundColor: "black",
+    backgroundColor: "white",
   };
   
   export const submitButtonStyle = {
     marginTop: "8px",
     display: "flex",
     justifyContent: "flex-end",
-    borderRadius: "80px",
   };
   
