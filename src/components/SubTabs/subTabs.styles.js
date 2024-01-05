@@ -21,7 +21,7 @@ export const tabContainerStyle = {
     "&.Mui-selected": {
       fontSize: "15px",
       color: "white",
-      background: "#311b92",
+      background: "#5c6bc0",
     },
   };
   

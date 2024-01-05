@@ -128,7 +128,7 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
           marginTop: "20px",
           width: "100%",
           height: "200px",
-          background: "#311b92",
+          background: "#283593",
           overflowY: "auto",
         }}
       >
@@ -151,7 +151,7 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
           marginTop: "20px",
           width: "100%",
           height: "200px",
-          background: "#311b92",
+          background: "#283593",
           overflowY: "auto",
         }}
       >
@@ -178,7 +178,7 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
             ...submitButtonStyle,
             borderRadius: "80px",
             fontWeight: "bold",
-            color: "#4527a0",
+            color: "#283593",
             backgroundColor: "white",
           }}
           onClick={handleSendRequest}

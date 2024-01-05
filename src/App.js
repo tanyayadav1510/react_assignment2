@@ -15,7 +15,7 @@ const theme = createTheme({
 
 function App() {
   return (
-    <div style={{backgroundColor: '#4527a0'}}>
+    <div style={{backgroundColor: '#3949ab'}}>
     <ThemeProvider theme={theme}>
         <HorizontalStepper />
         <TabsBar/> 

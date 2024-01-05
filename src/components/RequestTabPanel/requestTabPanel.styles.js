@@ -1,5 +1,5 @@
 export const containerStyle = {
-    background: "#4527a0",
+    background: "#3949ab",
   };
   
   export const menuItemStyle = {
