@@ -5,7 +5,7 @@ import { containerStyle, barStyle } from './horizontalStepper.styles';
 const HorizontalStepper = () => {
   return (
     <>
-      <div style={{ height: '40px', background: 'white' }}></div>
+      <div style={{ height: '6vh', background: 'white' }}></div>
       <div style={containerStyle}>
         {Array.from({ length: 23 }, (_, index) => (
           <Box key={index} sx={barStyle} />

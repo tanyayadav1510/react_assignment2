@@ -6,5 +6,6 @@ export const tabStyle = {
   export const boldTabStyle = {
     color: 'white',
     fontSize: '16px',
+    backgroundColor:"none"
   };
   

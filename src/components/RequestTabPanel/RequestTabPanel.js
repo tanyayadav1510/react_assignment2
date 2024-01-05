@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { TextField } from "@mui/material";
 import { Divider } from "@mui/material";
 import { Button } from "@mui/material";
@@ -84,10 +84,10 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
       <PopupState variant="popover" popupId="demo-popup-menu">
         {(popupState) => (
           <React.Fragment>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex"}}>
               <div style={{ background: "white" }}>
-                <MenuItem {...bindTrigger(popupState)} style={menuItemStyle}>
-                  {method} <ExpandMoreIcon />
+                <MenuItem {...bindTrigger(popupState)} style={menuItemStyle} disableRipple>
+                  {method} <ArrowDropDownIcon sx={{ position: 'absolute',paddingLeft: '80px'}}/>
                 </MenuItem>
                 <Menu {...bindMenu(popupState)}>
                   {menuItems.map((item) => (
@@ -104,10 +104,12 @@ export default function RequestTabPanel({ tabState = {}, setTabState }) {
                   ))}
                 </Menu>
               </div>
-
+              <div style={{ background: "white", fontSize:"18px", color:"grey", padding: "5px 20px 5px 50px" }} >
+              Domain URL
+              </div>
               <input
                 style={inputStyle}
-                placeholder="Domain URL"
+                placeholder="API"
                 type="text"
                 id="api"
                 value={api}

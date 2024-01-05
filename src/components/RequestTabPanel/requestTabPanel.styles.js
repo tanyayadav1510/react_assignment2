@@ -4,7 +4,7 @@ export const containerStyle = {
   
   export const menuItemStyle = {
     width: "100px",
-    color: "black",
+    color: "black"
   };
   
   export const inputStyle = {
